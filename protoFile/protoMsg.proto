@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package myProto;
+
+//option optimize_for = SPEED
+
+message Pixel {
+    required int32 symbol = 1;
+    required int32 x_loc = 2;
+    required int32 y_loc = 3;
+}
+
+message StrMsg {
+    required string main_msg = 1;
+    optional string hint_msg = 2;
+}
+
+message FrameMsg {
+    repeated Pixel pixels = 1;
+    optional string hint_msg = 2;
+}
