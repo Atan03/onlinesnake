@@ -84,7 +84,7 @@ make server/server.out; make client/client.out
 
 
 
-### 文件结构
+### 文件结构：
 
 - common目录中定义了便于重用的socket自定义库文件：socketLib.cpp、公有游戏组件文件：commonUtils.cpp。
 
