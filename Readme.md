@@ -105,7 +105,7 @@ make server/server.out; make client/client.out
 - [ ] 优化client代码提高代码可复用性
 - [ ] 尝试Proactor模式
 - [ ] 增加心跳包
-- [ ] 拷贝构造改用移动构造函数
+- [x] 拷贝构造改用移动构造函数   ----移后源对象需要使用，移动构造不适用
 
 
 
