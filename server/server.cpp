@@ -51,8 +51,9 @@ pair<int, int> createProcessPool() {
     if(sockState == -1) {
         throw runtime_error("UNIX sock create failure. errno: " + to_string(errno));
     }  
-
-    semsetId = semget(SEMKEY, 1, (0666 | IPC_CREAT | IPC_EXCL));
+    semsetId = semget(SEMKEY, 1, (0666 | IPC_CREAT));
+    char* message = strerror(errno);
+    printf("%s\n", message);
     if(semsetId == -1) {
         throw runtime_error("Semaphore create failure. errno: " + to_string(errno));
     }

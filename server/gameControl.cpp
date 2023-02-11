@@ -1,4 +1,4 @@
-#include"gameControl.h"
+#include "gameControl.h"
 
 std::unordered_set<std::shared_ptr<Dot>> dotPtrSet;
 std::unordered_map<int, std::shared_ptr<Snake>> playerList;

@@ -105,6 +105,8 @@ int socketErrTrw() {
 
 void bindErrTrw(int sockFd, const sockaddr_in &saddr) {
     int bindState = bind(sockFd, (sockaddr *)&saddr, sizeof(saddr));
+    char* message = strerror(errno);
+    printf("%s\n", message);    
     if(bindState != 0) {
         throw std::runtime_error("Socket binding failure, errno: " + std::to_string(errno));
     }
